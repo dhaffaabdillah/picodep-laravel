@@ -10,7 +10,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/mysceret/pasien">
+            <a class="nav-link" href="/secret/pasien">
               <span data-feather="file"></span>
               Pasien
             </a>

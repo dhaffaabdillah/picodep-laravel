@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\admin\AgamaController;
 use App\Http\Controllers\PasienController;
+use App\Http\Controllers\PasienC;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,24 +25,21 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => $adminUrl], function() {
-	Route::get('/', function() {
-		return view('welcome');
-	});
 
-	Route::get('/', 					[AuthController::class, 'formLogin'])->name('login');
-	Route::get('/login', 				[AuthController::class, 'formLogin'])->name('login');
-	Route::get('/register',				[AuthController::class, 'formRegister'])->name('register');
-	Route::post('/login', 				[AuthController::class, 'login']);
-	Route::post('/register', 			[AuthController::class, 'register']);
+	// ==== AUTH System ==== \\
+	Route::get('/', 						[AuthController::class, 'formLogin'])->name('login');
+	Route::get('/login', 					[AuthController::class, 'formLogin'])->name('login');
+	Route::get('/register',					[AuthController::class, 'formRegister'])->name('register');
+	Route::post('/login', 					[AuthController::class, 'login']);
+	Route::post('/register', 				[AuthController::class, 'register']);
 
 	Route::group(['middleware' => 'auth'], function() {
-		Route::get('/admin', 			[AdminController::class, 'index'])->name('home');
+		Route::get('/admin', 				[AdminController::class, 'index'])->name('home');
 
 		// === CRUD Pasien === \\
-		Route::get('/pasien', 			[PasienController::class, 'index']);
-		Route::get('/pasien/add', 		[PasienController::class, 'add']);
-		Route::get('/pasien/edit',		[PasienController::class, 'edit']);
-		Route::post('/pasien/submit',	[PasienController::class, 'store']);
+		Route::resource('pasien', 			PasienC::class);
+		
+		Route::get('/agama', 				[AgamaController::class, 'index']);
 
 
 		Route::get('/logout', 			[AuthController::class, 'logout'])->name('logout');
