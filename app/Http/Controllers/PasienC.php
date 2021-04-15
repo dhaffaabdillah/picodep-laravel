@@ -67,14 +67,16 @@ class PasienC extends Controller
         // validasi data 
         $request->validate([
             'NamaPasien'            =>  'required',
+            'JenisKelamin'          =>  'required',
             'StatusPasien'          =>  'required',
+            'TempatIsolasi'         =>  'required',
             'TanggalPemeriksaan'    =>  'required',
             'TanggalLahir'          =>  'required',
             'Agama'                 =>  'required',
             'KelurahanTinggal'      =>  'required',
             'KecamatanTinggal'      =>  'required',
             'Alamat'                =>  'required',
-            // 'JenisKelamin'          =>  'required',
+            
         ]);
 
         $pasien->update($request->all());

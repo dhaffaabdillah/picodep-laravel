@@ -9,7 +9,7 @@
                 <br/>
                 
 
-                <form method="post" action="{{ route('pasien.update', $pasien->Id) }}">
+                <form method="POST" action="{{ route('pasien.update', $pasien->Id) }}">
                     @csrf
 					@method('PUT')
 
@@ -17,6 +17,12 @@
                         <label class="text-label">Nama</label>
                         <input type="text" name="NamaPasien" class="form-control" placeholder="Nama pasien" value=" {{ $pasien->NamaPasien }}" >
                     </div>
+                    
+                    <!-- <div class="form-group">
+                        <label for="" class="text-label">Jenis Kelamin</label> -->
+                        <input name="JenisKelamin" type="text" class="form-control" value="{{$pasien->JenisKelamin}}" hidden>
+                    <!-- </div> -->
+
 
                     <div class="form-group">
                         <label>Status Pasien</label>
@@ -30,7 +36,7 @@
 
                     <div class="form-group">
                         <label>Tempat Isolasi </label>
-                        <input type="text" class="form-control" value="{{ $pasien->TempatIsolasi }}" name="tIsolasi">
+                        <input type="number" class="form-control" value="{{ $pasien->TempatIsolasi }}" name="TempatIsolasi">
                     </div>
                     
                     <div class="form-group">
@@ -62,11 +68,12 @@
                         <label>Kecamatan Tinggal</label>
                         <input type="text" class="form-control" value="{{ $pasien->KecamatanTinggal }}" name="KecamatanTinggal">
                     </div>
-
+              
                     <div class="form-group">
                         <label>Alamat</label>
                         <textarea name="Alamat" class="form-control" placeholder="Alamat pasien" > {{ $pasien->Alamat }} </textarea>
                     </div>
+
 					<div class="form-group">
 						<button type="submit" class="btn btn-success col-md-12">Update</button>
 					</div>

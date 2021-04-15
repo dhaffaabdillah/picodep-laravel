@@ -6,6 +6,8 @@ use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\AgamaController;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\PasienC;
+use App\Http\Controllers\publics\PublicController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,9 +22,12 @@ testing_laravel.test
 
 $adminUrl = env("ADMIN_URL", "admin");
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// front end halaman utama
+Route::get('/', [PublicController::class, 'index']);
 
 Route::group(['prefix' => $adminUrl], function() {
 

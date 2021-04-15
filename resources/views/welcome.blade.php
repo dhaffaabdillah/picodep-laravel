@@ -130,3 +130,31 @@
         </div>
     </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    getAPIcorona()
+    // getDataCovIndonesia()
+});
+
+function getAPIcorona() 
+{
+    $.ajax({
+        url : 'https://api.covid19api.com/live/country/indonesia/status/confirmed',
+        method : "GET",
+        dataType : "json",
+        // success: function(data) {}
+    });
+}
+
+function getDataCovIndonesia() 
+{
+    $.ajax({
+        url: 'https://api.kawalcorona.com/indonesia',
+        // url: 'https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=Provinsi,Kasus_Posi,Kasus_Semb,Kasus_Meni&outSR=4326&f=json',
+        method: "GET",
+        dataType:'json',
+        // success: function(data)}
+    });
+}
+</script>
