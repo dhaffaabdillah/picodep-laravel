@@ -28,7 +28,9 @@ $adminUrl = env("ADMIN_URL", "admin");
 
 // front end halaman utama
 Route::get('/', 				[PublicController::class, 'index']);
+Route::get('/data_allregion', 	[PublicController::class, 'allregion']);
 Route::get('/data_indonesia', 	[PublicController::class, 'indonesia']);
+Route::get('/data_provinsi', 	[PublicController::class, 'provinsi']);
 Route::get('/data_depok', 		[PublicController::class, 'depok']);
 
 Route::group(['prefix' => $adminUrl], function() {

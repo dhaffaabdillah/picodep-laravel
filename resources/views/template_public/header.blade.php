@@ -186,28 +186,16 @@
                 <li class="active"><a href="index.html">Home</a></li>
                 <li class="dropdown submenu">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="prevention.html" role="button"
-                    aria-haspopup="true" aria-expanded="false">Prevention </a>
+                    aria-haspopup="true" aria-expanded="false">Data Kasus </a>
                   <i class="linearicons-chevron-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
                   <ul class="dropdown-menu">
-                    <li class="dropdown submenu">
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="symptom.html" role="button"
-                        aria-haspopup="true" aria-expanded="false">Symptoms
-                        <i class="linearicons-chevron-right mobile_dropdown" aria-hidden="true"
-                          data-toggle="dropdown"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a href="symptom.html">Typical Symptoms</a></li>
-                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
-                        <li><a href="prevention.html">Prevention</a></li>
-                        <li><a href="virus-checker.html">Coronavirus Checker</a></li>
-                        <li><a href="tracker.html">Tracker</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="maintenance.html">Maintenance</a></li>
-                    <li><a href="faq.html">FAQS</a></li>
+                    <li><a href="/data_allregion">Semua Negara</a></li>
+                    <li><a href="/data_indonesia">Indonesia</a></li>
+                    <li><a href="/data_indonesia">Semua Provinsi</a></li>
+                    <li><a href="/data_depok">Depok</a></li>
                   </ul>
                 </li>
-                <li><a href="appointment.html">Appointment</a></li>
+                <li><a href="appointment.html">Lapor Kasus</a></li>
                 <li class="dropdown submenu">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                     aria-expanded="false">Pages</a>
@@ -234,7 +222,7 @@
                 </li>
                 <li class="dropdown submenu">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="blog.html" role="button" aria-haspopup="true"
-                    aria-expanded="false">Blog
+                    aria-expanded="false">Berita
                   </a>
                   <i class="linearicons-chevron-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
                   <ul class="dropdown-menu">
@@ -242,11 +230,11 @@
                     <li><a href="single-blog.html">Blog Details</a></li>
                   </ul>
                 </li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html">Lebih...</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="checker_btn">
-                  <a href="#"><i class="linearicons-pulse"></i> Symptom Checker</a>
+                  <a href="#"><i class="linearicons-pulse"></i> Daftar Vaksinasi</a>
                 </li>
               </ul>
             </div>

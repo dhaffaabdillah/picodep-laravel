@@ -342,5 +342,16 @@
       </div>
     </section>
     <!--================End Washing Process Area =================-->
+<script>
+$(document).ready(function(){
+    // dataDepok()
+})
+
+function dataDepok(){
+    $.ajax({
+        url: ''
+    });
+}
+</script>
 
 @endsection
