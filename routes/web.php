@@ -4,10 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\AgamaController;
-use App\Http\Controllers\PasienController;
+use App\Http\Controllers\admin\VaksinController as AdminVaksinController;
 use App\Http\Controllers\PasienC;
 use App\Http\Controllers\publics\PublicController;
+use App\Http\Controllers\StatusPasienController;
+use App\Http\Controllers\VaksinController;
 
+// pw db server = qF]~QbWKk1A)lWS0
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,11 +30,16 @@ $adminUrl = env("ADMIN_URL", "admin");
 // });
 
 // front end halaman utama
-Route::get('/', 				[PublicController::class, 'index']);
-Route::get('/data_allregion', 	[PublicController::class, 'allregion']);
-Route::get('/data_indonesia', 	[PublicController::class, 'indonesia']);
-Route::get('/data_provinsi', 	[PublicController::class, 'provinsi']);
-Route::get('/data_depok', 		[PublicController::class, 'depok']);
+Route::get('/', 					[PublicController::class, 'index']);
+Route::get('/data_allregion', 		[PublicController::class, 'allReg']);
+Route::get('/data_indonesia', 		[PublicController::class, 'indonesia']);
+Route::get('/data_provinsi', 		[PublicController::class, 'provinsi']);
+Route::get('/data_depok', 			[PublicController::class, 'getDataDepok']);
+Route::get('/apiDepok', 			[PublicController::class, 'getDepok']);
+
+// vaksin
+Route::get('/daftarvaksin', 		[VaksinController::class, 'index'])->name('vaksin');
+Route::post('/daftarvaksin/send', 	[VaksinController::class, 'submit']);
 
 Route::group(['prefix' => $adminUrl], function() {
 
@@ -47,7 +55,8 @@ Route::group(['prefix' => $adminUrl], function() {
 
 		// === CRUD Pasien === \\
 		Route::resource('pasien', 			PasienC::class);
-		
+		Route::resource('vaksin', 			AdminVaksinController::class);
+		ROute::resource('status-pasien',	StatusPasienController::class);
 		Route::get('/agama', 				[AgamaController::class, 'index']);
 
 

@@ -16,7 +16,7 @@
                     <div class="media-body">
                       <h5>emergency call</h5>
                       <a href="tel:+8801676790690">
-                        <h4>+61 (8) 8234 3555</h4>
+                        <h4>+62 999-8888</h4>
                       </a>
                     </div>
                   </div>
@@ -27,7 +27,7 @@
                     <div class="media-body">
                       <p>
                         78-66 State Route 33,<br />
-                        Brighton VIC 3186, AUSTRALIA
+                        Depok VIC 3186, Jawa Barat
                       </p>
                     </div>
                   </div>
@@ -36,8 +36,8 @@
                       <i class="fab fa-skype"></i>
                     </div>
                     <div class="media-body">
-                      <a href="skype:md.rocky79">
-                        <h6>Skype ID: <span>epidemic.org</span></h6>
+                      <a href="#">
+                        <h6>Original Site: <span><a href="https://picodep.depok.go.id"> picodep.depok.go.id</a></span></h6>
                       </a>
                     </div>
                   </div>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="media-body">
                       <a href="mailto:rockybd1995@gmail.com">
-                        <h6>Email: <span>hi@epidemic.org</span></h6>
+                        <h6>Email: <span>hi@picodep.go.id</span></h6>
                       </a>
                     </div>
                   </div>
@@ -146,7 +146,7 @@
       </div>
       <div class="footer_copyright">
         <div class="container">
-          <img src="{{asset('/images/f-logo.png')}}" alt="">
+          <img src="{{asset('/images/picodep-logo/logo-picodep3_2_181x46.png')}}" alt="">
           <p>© Copyright
             <script>
               document.write(new Date().getFullYear());

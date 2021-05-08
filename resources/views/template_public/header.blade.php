@@ -19,53 +19,50 @@
       </div>
       <div class="menu_part_lux">
         <ul class="menu_list wd_scroll">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li>
-            <a href="index.html">Prevention
+            <a href="index.html">Data Kasus
               <i class="linearicons-chevron-down"></i>
             </a>
             <ul class="list">
-              <li><a href="symptom.html">Typical Symptoms</a></li>
-              <li><a href="symptom-checker.html">Symptom Checker</a></li>
-              <li><a href="prevention.html">Prevention</a></li>
-              <li><a href="virus-checker.html">Coronavirus Checker</a></li>
-              <li><a href="tracker.html">Tracker</a></li>
-              <li><a href="maintenance.html">Maintenance</a></li>
-              <li><a href="faq.html">Faqs</a></li>
+              <li><a href="/data_allregion">Semua Negara</a></li>
+              <li><a href="/data_indonesia">Indonesia</a></li>
+              <li><a href="/data_provinsi">Semua Provinsi</a></li>
+              <li><a href="/data_depok">Depok</a></li>
             </ul>
           </li>
-          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="appointment.html">Lapor Kasus</a></li>
           <li>
-            <a href="#">Pages
+            <a href="#">Coming Soon
               <i class="linearicons-chevron-down"></i>
             </a>
             <ul class="list">
-              <li><a href="about.html">About</a></li>
+              <!-- <li><a href="about.html">About</a></li>
               <li><a href="doctors.html">Doctors</a></li>
               <li><a href="sample-right-sidebar.html">Simple Sidebar</a></li>
               <li><a href="typography.html">Typhography</a></li>
               <li><a href="search.html">Search</a></li>
               <li><a href="search-nothing.html">Not Found</a></li>
               <li><a href="comingsoon.html">Coming Soon</a></li>
-              <li><a href="404.html">Error</a></li>
+              <li><a href="404.html">Error</a></li> -->
             </ul>
           </li>
 
           <li>
-            <a href="index.html">Blog
+            <a href="index.html">Berita
               <i class="linearicons-chevron-down"></i>
             </a>
             <ul class="list">
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="single-blog.html">Blog Details</a></li>
+              <li><a href="blog.html">Berita</a></li>
+              <li><a href="single-blog.html">Berita Details</a></li>
 
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Lebih...</a></li>
         </ul>
       </div>
       <div class="menu_btm">
-        <a class="green_btn" href="#"><i class="linearicons-pulse"></i> Symptom Checker</a>
+        <a class="green_btn" href="{{ route('vaksin')}}"><i class="linearicons-pulse"></i> Daftar Vaksinasi</a>
       </div>
     </div>
     <!--================End Mobile Canvus Menu Area =================-->
@@ -148,11 +145,11 @@
           <p>© Copyright
             <script>
               document.write(new Date().getFullYear());
-            </script> Epidemic Organisation Ltd.
+            </script> XURZERTH corp.
           </p>
           <h6>
             Designed with <i class="linearicons-heart"></i>
-            by <span>creakits</span>
+            by <span>Dhaffa Abdillah</span>
           </h6>
         </div>
       </div>
@@ -161,7 +158,7 @@
 
     <!--================Header Area =================-->
     <header class="header_area">
-      <ul class="nav menu_social flex-column">
+      <!-- <ul class="nav menu_social flex-column">
         <li>
           <a href="#"><i class="fab fa-facebook"></i></a>
         </li>
@@ -171,19 +168,19 @@
         <li>
           <a href="#"><i class="fab fa-instagram"></i></a>
         </li>
-      </ul>
+      </ul> -->
       <div class="main_menu">
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html"><img src="{{asset('/images/logo.png')}}"
-                srcset="{{asset('/images/logo-2x.png 2x')}}" alt="" /></a>
+            <a class="navbar-brand" href="index.html"><img src="{{asset('/images/picodep-logo/logo-picodep3_203x53.png')}}"
+                srcset="{{asset('/images/picodep-logo/logo-picodep3_1_406x106.png 2x')}}" alt="" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav ml-auto">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="/">Home</a></li>
                 <li class="dropdown submenu">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="prevention.html" role="button"
                     aria-haspopup="true" aria-expanded="false">Data Kasus </a>
@@ -191,7 +188,7 @@
                   <ul class="dropdown-menu">
                     <li><a href="/data_allregion">Semua Negara</a></li>
                     <li><a href="/data_indonesia">Indonesia</a></li>
-                    <li><a href="/data_indonesia">Semua Provinsi</a></li>
+                    <li><a href="/data_provinsi">Semua Provinsi</a></li>
                     <li><a href="/data_depok">Depok</a></li>
                   </ul>
                 </li>
@@ -234,7 +231,7 @@
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="checker_btn">
-                  <a href="#"><i class="linearicons-pulse"></i> Daftar Vaksinasi</a>
+                  <a href="{{route('vaksin') }}"><i class="linearicons-pulse"></i> Daftar Vaksinasi</a>
                 </li>
               </ul>
             </div>

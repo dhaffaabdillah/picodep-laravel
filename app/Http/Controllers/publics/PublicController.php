@@ -14,6 +14,11 @@ class PublicController extends Controller
         return view('index');
     }
 
+    public function allReg()
+    {
+        return view('allRegion');
+    }
+
     public function allregion()
     {
         $api    = Http::get('https://api.kawalcorona.com');
@@ -34,16 +39,23 @@ class PublicController extends Controller
     {
         $dataProv   = Http::get('https://api.kawalcorona.com/indonesia/provinsi');
         $getDataProv= $dataProv->json();
-        dd($getDataProv);
-        return view('sebaranProv', compact('getDataProv'));
+        // dd($getDataProv);
+        return view('dataProvinsi', compact('getDataProv'));
     }
 
-    public function depok()
+    public function getDataDepok()
     {
         $apiPicodep     = Http::get('https://picodep.depok.go.id/Homee/getWidget');
-        $getDataPicodep = $apiPicodep->json();
-        dd($getDataPicodep);
-        return view('sebaranDepok', compact('getDataPicodep'));
+        $dataDepok      = $apiPicodep->json();
+        // json_encode($apiPicodep);
+        // dd($dataDepok);
+        return view('dataDepok', compact('dataDepok'));
+    }
+
+    public function getDepok()
+    {
+        $api = Http::get('https://picodep.depok.go.id/Homee/getWidget');
+        json_encode($api);
     }
 }
 

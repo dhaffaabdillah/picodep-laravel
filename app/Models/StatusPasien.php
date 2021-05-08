@@ -12,8 +12,9 @@ class StatusPasien extends Model
     use HasFactory;
 
     protected $table = 'status_pasien';
-    // protected $primaryKey = 'IdStatus';
+    protected $primaryKey = 'IdStatus';
     // protected $foreignKey = 'StatusPasien';
+    protected $fillable = ['IdStatus','NamaStatus'];
 
     public function pasien()
     {

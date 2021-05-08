@@ -55,9 +55,11 @@
             </div>
           </div>
         </div>
+        
         <div class="tracker_btn">
           <a class="green_btn wow fadeInUp" data-wow-delay="500" href="/data_indonesia"><i class="linearicons-earth-lock"></i> Data Sebaran Indonesia</a>
         </div>
+        
       </div>
     </section>
     <!--================End Worldwide Tracker Area =================-->
