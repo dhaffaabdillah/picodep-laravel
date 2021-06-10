@@ -32,15 +32,12 @@
 						<td>{{ $p->Alamat}}</td>
 						<td>{{ $p->TanggalPemeriksaan}}</td>
 						<td>
-							<!-- <a href="/secret/pasien/detail/{{$p->Id}}">Detail</a> &nbsp;
-							<a href="/secret/pasien/edit/{{$p->Id}}">Edit</a> &nbsp;
-							<a href="/secret/pasien/delete/{{$p->Id}}">Hapus</a> &nbsp; -->
 							<form action="{{ route('pasien.destroy', $p->Id) }}" method="POST">
-								<a href="{{ route('pasien.show', $p->Id) }}" class=""><button class="btn btn-primary"> <i class="far fa-eye"></i> Detail</button></a>
-								<a href="{{ route('pasien.edit', $p->Id) }}" class=""><button class="btn btn-warning"><i class="far fa-edit"></i> Edit</button></a>
+								<a href="{{ route('pasien.show', $p->Id) }}" class="btn btn-warning ">Detail</a>
+								<a href="{{ route('pasien.edit', $p->Id) }}" class="btn btn-primary">Edit</a>
 								@csrf
                     			@method('DELETE')
-								<button type="submit" onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger"><i class="far fa-trash"></i> Delete</button>
+								<button  type="submit" onclick="return confirm('Apakah anda yakin menghapus data ini?')" >Delete</button>
 							</form>
 						</td>
 					</tr>

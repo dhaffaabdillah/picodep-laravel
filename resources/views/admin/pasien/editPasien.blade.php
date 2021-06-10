@@ -36,7 +36,7 @@
 
                     <div class="form-group">
                         <label>Tempat Isolasi </label>
-                        <input type="number" class="form-control" value="{{ $pasien->TempatIsolasi }}" name="TempatIsolasi">
+                        <input type="text" class="form-control" value="{{ $pasien->TempatIsolasi }}" name="TempatIsolasi">
                     </div>
                     
                     <div class="form-group">

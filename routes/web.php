@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\AgamaController;
 use App\Http\Controllers\admin\VaksinController as AdminVaksinController;
 use App\Http\Controllers\PasienC;
+use App\Http\Controllers\PasiensController;
 use App\Http\Controllers\publics\PublicController;
 use App\Http\Controllers\StatusPasienController;
 use App\Http\Controllers\VaksinController;
@@ -54,7 +55,7 @@ Route::group(['prefix' => $adminUrl], function() {
 		Route::get('/admin', 				[AdminController::class, 'index'])->name('home');
 
 		// === CRUD Pasien === \\
-		Route::resource('pasien', 			PasienC::class);
+		Route::resource('pasien', 			PasiensController::class);
 		Route::resource('vaksin', 			AdminVaksinController::class);
 		ROute::resource('status-pasien',	StatusPasienController::class);
 		Route::get('/agama', 				[AgamaController::class, 'index']);

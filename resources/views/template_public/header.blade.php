@@ -193,7 +193,7 @@
                   </ul>
                 </li>
                 <li><a href="appointment.html">Lapor Kasus</a></li>
-                <li class="dropdown submenu">
+                <!-- <li class="dropdown submenu">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                     aria-expanded="false">Pages</a>
                   <i class="linearicons-chevron-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
@@ -216,7 +216,7 @@
                     <li><a href="comingsoon.html">Coming Soon</a></li>
                     <li><a href="404.html">Error</a></li>
                   </ul>
-                </li>
+                </li> -->
                 <li class="dropdown submenu">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="blog.html" role="button" aria-haspopup="true"
                     aria-expanded="false">Berita
